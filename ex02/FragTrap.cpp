@@ -6,15 +6,20 @@
 /*   By: maballet <maballet@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/16 21:22:47 by maballet          #+#    #+#             */
-/*   Updated: 2025/12/16 22:39:33 by maballet         ###   ########lyon.fr   */
+/*   Updated: 2026/01/07 17:42:20 by maballet         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
 
-FragTrap::FragTrap ( std::string name ): ClapTrap(name) {
+FragTrap::FragTrap() {
 
-	std::cout << "FragTrap constructor called" << std::endl;
+	std::cout << "FragTrap default constructor called" << std::endl;
+}
+
+FragTrap::FragTrap (std::string name): ClapTrap(name) {
+
+	std::cout << "FragTrap argument constructor called" << std::endl;
 	_HitPoint = 100;
 	_EnergyPoint = 100;
 	_AttackDmg = 30;

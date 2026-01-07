@@ -6,13 +6,18 @@
 /*   By: maballet <maballet@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/16 16:28:44 by maballet          #+#    #+#             */
-/*   Updated: 2025/12/16 21:54:49 by maballet         ###   ########lyon.fr   */
+/*   Updated: 2026/01/07 17:35:08 by maballet         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap( std::string name ): ClapTrap(name) {
+ScavTrap::ScavTrap() {
+
+	std::cout << "ScavTrap default constructor called" << std::endl;
+}
+
+ScavTrap::ScavTrap(std::string name): ClapTrap(name) {
 
 	std::cout << "ScavTrap constructor called" << std::endl;
 	_HitPoint = 100;
@@ -20,15 +25,15 @@ ScavTrap::ScavTrap( std::string name ): ClapTrap(name) {
 	_AttackDmg = 20;
 }
 
-ScavTrap::ScavTrap ( const ScavTrap& other ) : ClapTrap(other) {
+ScavTrap::ScavTrap (const ScavTrap& other) : ClapTrap(other) {
 
 	std::cout << "ScavTrap copy constructor called" << std::endl;
 }
 
-ScavTrap& ScavTrap::operator = ( const ScavTrap& other ) {
+ScavTrap& ScavTrap::operator = (const ScavTrap& other) {
 
 	std::cout << "scavTrap copy assignment constructor called" << std::endl;
-	if  (this != &other )
+	if  (this != &other)
 		ClapTrap::operator = (other);
 	return *this;
 }

@@ -6,7 +6,7 @@
 /*   By: maballet <maballet@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/16 16:23:47 by maballet          #+#    #+#             */
-/*   Updated: 2025/12/16 21:43:53 by maballet         ###   ########lyon.fr   */
+/*   Updated: 2026/01/07 17:33:17 by maballet         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,8 @@ class ScavTrap : public ClapTrap {
 
 	public:
 
-	ScavTrap( std::string name = "");
+	ScavTrap();
+	ScavTrap(std::string name);
 	ScavTrap(const ScavTrap&);
 	ScavTrap& operator=(const ScavTrap&);
 	virtual ~ScavTrap();

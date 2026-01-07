@@ -6,7 +6,7 @@
 /*   By: maballet <maballet@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/16 13:21:06 by maballet          #+#    #+#             */
-/*   Updated: 2025/12/16 21:43:14 by maballet         ###   ########lyon.fr   */
+/*   Updated: 2026/01/07 17:18:12 by maballet         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,10 @@ class ClapTrap {
 
 	public:
 
-	ClapTrap ( std::string name = "");
-	ClapTrap ( const ClapTrap& );
-	ClapTrap& operator = ( const ClapTrap& );
+	ClapTrap ();
+	ClapTrap (std::string name);
+	ClapTrap (const ClapTrap&);
+	ClapTrap& operator = (const ClapTrap&);
 	virtual ~ClapTrap ();
 	
 	void attack(const std::string& target);

@@ -6,15 +6,24 @@
 /*   By: maballet <maballet@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/16 13:32:44 by maballet          #+#    #+#             */
-/*   Updated: 2025/12/16 21:42:50 by maballet         ###   ########lyon.fr   */
+/*   Updated: 2026/01/07 17:39:11 by maballet         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap ( std::string name ): _name(name), _HitPoint(10), _EnergyPoint(10), _AttackDmg(0){
+ClapTrap::ClapTrap() {
 
-	std::cout << "ClapTrap constructor called" << std::endl;
+	std::cout << "ClapTrap default constructor called" << std::endl;
+}
+
+ClapTrap::ClapTrap ( std::string name ):
+	_name(name), 
+	_HitPoint(10),
+	_EnergyPoint(10),
+	_AttackDmg(0){
+
+	std::cout << "ClapTrap default argument constructor called" << std::endl;
 }
 
 ClapTrap::ClapTrap ( const ClapTrap& other ) {

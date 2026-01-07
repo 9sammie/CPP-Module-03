@@ -6,7 +6,7 @@
 /*   By: maballet <maballet@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/16 21:23:11 by maballet          #+#    #+#             */
-/*   Updated: 2025/12/16 22:39:27 by maballet         ###   ########lyon.fr   */
+/*   Updated: 2026/01/07 17:43:36 by maballet         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,12 @@ class FragTrap : public ClapTrap {
 
 	public:
 	
-	FragTrap ( std::string name = "");
+	FragTrap ();
+	FragTrap (std::string name);
 	FragTrap (const FragTrap&);
 	FragTrap& operator=(const FragTrap&);
 	virtual ~FragTrap();
-	void highFivesGuys( void );
+	void highFivesGuys(void);
 };
 
 #endif
