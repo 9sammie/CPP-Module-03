@@ -6,7 +6,7 @@
 /*   By: maballet <maballet@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/16 21:22:47 by maballet          #+#    #+#             */
-/*   Updated: 2026/01/07 17:42:20 by maballet         ###   ########lyon.fr   */
+/*   Updated: 2026/01/22 20:37:38 by maballet         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,5 +45,5 @@ FragTrap::~FragTrap() {
 
 void FragTrap::highFivesGuys( void ) {
 
-	std::cout << ORANGE << YELLOWBG << "HeY gUyS HoOoow's iT goIing ? ( ˘ ³˘)ノ°ﾟº❍｡" << STANDARD << std::endl;
+	std::cout << ORANGE << YELLOWBG << "⋆˙⟡" << _name << "⟡˙⋆" << STANDARD << ": HeY gUyS HoOoow's iT goIing ? ( ˘ ³˘)ノ°ﾟº❍｡" << std::endl;
 }

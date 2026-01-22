@@ -6,7 +6,7 @@
 /*   By: maballet <maballet@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/16 13:32:44 by maballet          #+#    #+#             */
-/*   Updated: 2026/01/07 17:37:31 by maballet         ###   ########lyon.fr   */
+/*   Updated: 2026/01/22 12:07:08 by maballet         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ ClapTrap& ClapTrap::operator = (const ClapTrap& other) {
 
 	std::cout << "copy assignment constructor called" << std::endl;
 	if  (this != &other )
-		this->_name = other._name;
+		_name = other._name;
 	return *this;
 }
 
@@ -47,39 +47,38 @@ ClapTrap::~ClapTrap () {
 
 void ClapTrap::attack(const std::string& target) {
 
-		if (this->_HitPoint <= 0 || this->_EnergyPoint <= 0) {
-			std::cout << GREEN << GREENBG << "⋆˙⟡" << this->_name << "⟡˙⋆" <<
+		if (_HitPoint <= 0 || _EnergyPoint <= 0) {
+			std::cout << GREEN << GREENBG << "⋆˙⟡" << _name << "⟡˙⋆" <<
 			STANDARD << " is not up to anything " << SADFACE << std::endl;	
 			return;
 		}
-		std::cout << GREEN << GREENBG "⋆˙⟡" << this->_name << "⟡˙⋆" <<
-		STANDARD << " attacks " << target << ", causing " << this->_AttackDmg <<
+		std::cout << GREEN << GREENBG "⋆˙⟡" << _name << "⟡˙⋆" <<
+		STANDARD << " attacks " << target << ", causing " << _AttackDmg <<
 		" points of damage !" << std::endl;
-		if (_EnergyPoint > 0) this->_EnergyPoint -= 1;
+		if (_EnergyPoint > 0) _EnergyPoint -= 1;
 		if (_EnergyPoint < 0) _EnergyPoint = 0;
 	}
 
 void ClapTrap::takeDamage(unsigned int amount) {
 
-	std::cout << GREEN << GREENBG << "⋆˙⟡" << this->_name << "⟡˙⋆" <<
-	STANDARD << " (" << this->_HitPoint << "pv), " << "took " <<
+	std::cout << GREEN << GREENBG << "⋆˙⟡" << _name << "⟡˙⋆" <<
+	STANDARD << " (" << _HitPoint << "pv), " << "took " <<
 	amount << " points of damage !" << std::endl;
-	this->_HitPoint -= amount;
-	if (_HitPoint > 0) this->_HitPoint -= 1;
+	_HitPoint -= amount;
 	if (_HitPoint < 0) _HitPoint = 0;
 }
 
 void ClapTrap::beRepaired(unsigned int amount) {
 
-	if (this->_HitPoint <= 0 || this->_EnergyPoint <= 0) {
-		std::cout << GREEN << GREENBG << "⋆˙⟡" << this->_name << "⟡˙⋆" <<
+	if (_HitPoint <= 0 || _EnergyPoint <= 0) {
+		std::cout << GREEN << GREENBG << "⋆˙⟡" << _name << "⟡˙⋆" <<
 		STANDARD << " is not up to anything " << SADFACE << std::endl;	
 		return;
 	}
-	std::cout << GREEN << GREENBG << "⋆˙⟡" << this->_name << "⟡˙⋆" <<
-	STANDARD << " (" << this->_HitPoint << "pv), " << "recovered " <<
+	std::cout << GREEN << GREENBG << "⋆˙⟡" << _name << "⟡˙⋆" <<
+	STANDARD << " (" << _HitPoint << "pv), " << "recovered " <<
 	amount << " hit points .☘︎ ݁˖" << std::endl;
-	this->_HitPoint += amount;
-	if (_EnergyPoint > 0) this->_EnergyPoint -= 1;
+	_HitPoint += amount;
+	if (_EnergyPoint > 0) _EnergyPoint -= 1;
 	if (_EnergyPoint < 0) _EnergyPoint = 0;
 }

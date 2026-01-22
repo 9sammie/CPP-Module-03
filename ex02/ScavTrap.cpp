@@ -6,7 +6,7 @@
 /*   By: maballet <maballet@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/16 16:28:44 by maballet          #+#    #+#             */
-/*   Updated: 2026/01/07 17:35:08 by maballet         ###   ########lyon.fr   */
+/*   Updated: 2026/01/22 20:35:08 by maballet         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,14 +47,14 @@ void ScavTrap::attack(const std::string& target) {
 	
 	if (_HitPoint <= 0 || _EnergyPoint <= 0)
     {
-        std::cout << "ScavTrap " << GREEN << GREENBG << "⋆˙⟡" << _name << "⟡˙⋆" << STANDARD << " can't attack!" << std::endl;
+        std::cout << GREEN << GREENBG << "⋆˙⟡" << _name << "⟡˙⋆" << STANDARD << " can't attack!" << std::endl;
         return;
     }
-	std::cout << "ScavTrap " << GREEN << GREENBG << "⋆˙⟡" << _name << "⟡˙⋆" << STANDARD << " ferociously attacks " << target << ", causing " << _AttackDmg << " points of damage!" << std::endl;
+	std::cout << GREEN << GREENBG << "⋆˙⟡" << _name << "⟡˙⋆" << STANDARD << " ferociously attacks " << target << ", causing " << _AttackDmg << " points of damage!" << std::endl;
     _EnergyPoint--;
 }
 
 void ScavTrap::guardGate() {
 
-    std::cout << "ScavTrap " << GREEN << GREENBG << "⋆˙⟡" << _name << "⟡˙⋆" << STANDARD << " is now in Gate keeper mode!" << std::endl;
+    std::cout << GREEN << GREENBG << "⋆˙⟡" << _name << "⟡˙⋆" << STANDARD << " is now in Gate keeper mode!" << std::endl;
 }

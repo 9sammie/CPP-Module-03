@@ -6,7 +6,7 @@
 /*   By: maballet <maballet@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/16 14:04:56 by maballet          #+#    #+#             */
-/*   Updated: 2025/12/16 22:39:49 by maballet         ###   ########lyon.fr   */
+/*   Updated: 2026/01/22 20:50:17 by maballet         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 int main(void)
 {
-    std::cout << GREYBG << "===== CLAPTRAP TEST =====" << STANDARD << std::endl;
+    std::cout << std::endl << GREYBG << "===== CLAPTRAP TEST =====" << STANDARD << std::endl << std::endl;
 
     ClapTrap clap("CLAPPY");
     clap.attack("target");
@@ -25,9 +25,9 @@ int main(void)
 
     std::cout << std::endl;
 
-    std::cout << GREYBG << "===== SCAVTRAP TEST =====" << STANDARD << std::endl;
+    std::cout << std::endl << GREYBG << "===== SCAVTRAP TEST =====" << STANDARD << std::endl << std::endl;
 
-    ScavTrap scav("SCAVVY");
+    ScavTrap scav("SCAVY");
     scav.attack("intruder");
     scav.takeDamage(20);
     scav.beRepaired(10);
@@ -35,53 +35,49 @@ int main(void)
 
     std::cout << std::endl;
 
-    std::cout << GREYBG << "===== FRAGTRAP CONSTRUCTION TEST =====" << STANDARD << std::endl;
+    std::cout << std::endl << GREYBG << "===== FRAGTRAP CONSTRUCTION TEST =====" << STANDARD << std::endl << std::endl;
 
-    FragTrap frag("FR4G-TP");
-
-    std::cout << std::endl;
-
-    std::cout << GREYBG << "===== FRAGTRAP ATTACK TEST =====" << STANDARD << std::endl;
-
-    frag.attack("dummy");
-    frag.attack("training bot");
+    FragTrap frag("FRAGGY");
 
     std::cout << std::endl;
 
-    std::cout << GREYBG << "===== FRAGTRAP DAMAGE / REPAIR TEST =====" << STANDARD << std::endl;
+    std::cout << std::endl << GREYBG << "===== FRAGTRAP ATTACK TEST =====" << STANDARD << std::endl << std::endl;
+
+    frag.attack("FRAGGY");
+    frag.attack("FRAGOS");
+
+    std::cout << std::endl;
+
+    std::cout << std::endl << GREYBG << "===== FRAGTRAP DAMAGE / REPAIR TEST =====" << STANDARD << std::endl << std::endl;
 
     frag.takeDamage(40);
     frag.beRepaired(20);
     frag.takeDamage(90);
-    frag.beRepaired(10); // ne doit rien faire si mort
+    frag.beRepaired(10);
 
     std::cout << std::endl;
 
-    std::cout << GREYBG << "===== FRAGTRAP SPECIAL ABILITY TEST =====" << STANDARD << std::endl;
+    std::cout << std::endl << GREYBG << "===== FRAGTRAP SPECIAL ABILITY TEST =====" << STANDARD << std::endl << std::endl;
 
-    FragTrap highFive("HIGHFIVE");
+    FragTrap highFive("FRAGGY");
     highFive.highFivesGuys();
 
     std::cout << std::endl;
 
-    std::cout << GREYBG << "===== ENERGY DEPLETION TEST =====" << STANDARD << std::endl;
+    std::cout << std::endl << GREYBG << "===== ENERGY DEPLETION TEST =====" << STANDARD << std::endl << std::endl;
 
-    FragTrap tired("TIRED");
+    FragTrap tired("FRAGGY");
 
     for (int i = 0; i < 105; i++)
         tired.attack("wall");
 
     std::cout << std::endl;
 
-    std::cout << GREYBG << "===== POLYMORPHISM & DESTRUCTION TEST =====" << STANDARD << std::endl;
+    std::cout << std::endl << GREYBG << "===== POLYMORPHISM & DESTRUCTION TEST =====" << STANDARD << std::endl << std::endl;
 
     ClapTrap* poly = new FragTrap("POLY");
     poly->attack("polymorphic target");
-    delete poly; // destruction inverse (FragTrap -> ClapTrap)
-
-    std::cout << std::endl;
-
-    std::cout << GREYBG << "===== END OF TESTS =====" << STANDARD << std::endl;
+    delete poly;
 
     return 0;
 }
