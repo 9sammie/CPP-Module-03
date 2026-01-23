@@ -6,7 +6,7 @@
 /*   By: maballet <maballet@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/16 16:28:44 by maballet          #+#    #+#             */
-/*   Updated: 2026/01/22 20:51:34 by maballet         ###   ########lyon.fr   */
+/*   Updated: 2026/01/23 17:49:37 by maballet         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,13 @@ void ScavTrap::attack(const std::string& target) {
 }
 
 void ScavTrap::guardGate() {
+
+	if (_EnergyPoint <= 0)
+	{
+        std::cout << GREEN << GREENBG << "⋆˙⟡" << _name << "⟡˙⋆" <<
+		STANDARD << " has no enrgy left..." << std::endl;
+        return;
+	}
     std::cout << GREEN << GREENBG << "⋆˙⟡" << _name << "⟡˙⋆" <<
 	STANDARD << " is now in Gate keeper mode!" << std::endl;
 }

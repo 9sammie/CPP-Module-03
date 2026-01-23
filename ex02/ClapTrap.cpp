@@ -6,7 +6,7 @@
 /*   By: maballet <maballet@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/16 13:32:44 by maballet          #+#    #+#             */
-/*   Updated: 2026/01/07 17:39:11 by maballet         ###   ########lyon.fr   */
+/*   Updated: 2026/01/23 17:39:09 by maballet         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,12 @@ ClapTrap& ClapTrap::operator = ( const ClapTrap& other ) {
 
 	std::cout << "ClapTrap copy assignment constructor called" << std::endl;
 	if  (this != &other )
-		this->_name = other._name;
+	{
+		_name = other._name;
+		_HitPoint = other._HitPoint;
+		_EnergyPoint = other._EnergyPoint;
+		_AttackDmg = other._AttackDmg;
+	}
 	return *this;
 }
 

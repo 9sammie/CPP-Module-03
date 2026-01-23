@@ -20,17 +20,16 @@ OBJ_DIR					=		obj
 ###									FLAGS	 ###
 ################################################################################
 
-CFLAGS					=		-std=c++98 -Wall -Wextra -Werror
+CFLAGS					=		-std=c++98 -Wall -Wextra -Werror -MMD -MP
 
 ################################################################################
 ###									FILES	 ###
 ################################################################################
 
-HEADERS					=		ClapTrap.hpp ScavTrap.hpp
-
 SRC						=		main.cpp ClapTrap.cpp ScavTrap.cpp
 
 OBJ						=		$(SRC:%.cpp=$(OBJ_DIR)/%.o)
+DEP						=		$(OBJ:%.o=%.d)
 
 ################################################################################
 ###									ARCHIVES ###
@@ -41,11 +40,13 @@ all: $(NAME)
 $(NAME): $(OBJ)
 			$(CXX) $(CFLAGS) $(OBJ) -o $(NAME)
 
-$(OBJ_DIR)/%.o: %.cpp $(HEADERS) | $(OBJ_DIR)
+$(OBJ_DIR)/%.o: %.cpp | $(OBJ_DIR)
 			$(CXX) $(CFLAGS) -o $@ -c $<
 
 $(OBJ_DIR):
 			mkdir -p $(OBJ_DIR)
+
+-include $(DEP)
 
 re: fclean
 			$(MAKE) all

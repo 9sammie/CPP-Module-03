@@ -6,7 +6,7 @@
 /*   By: maballet <maballet@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/16 13:21:06 by maballet          #+#    #+#             */
-/*   Updated: 2026/01/07 17:18:12 by maballet         ###   ########lyon.fr   */
+/*   Updated: 2026/01/23 14:58:57 by maballet         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@
 class ClapTrap {
 
 	protected:
-	
+
 	std::string	_name;
 	int			_HitPoint;
 	int			_EnergyPoint;
@@ -40,11 +40,11 @@ class ClapTrap {
 	ClapTrap (const ClapTrap&);
 	ClapTrap& operator = (const ClapTrap&);
 	virtual ~ClapTrap ();
-	
+
 	void attack(const std::string& target);
 	void takeDamage(unsigned int amount);
 	void beRepaired(unsigned int amount);
-	
+
 };
 
 #endif
