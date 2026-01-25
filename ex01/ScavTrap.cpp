@@ -6,7 +6,7 @@
 /*   By: maballet <maballet@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/16 16:28:44 by maballet          #+#    #+#             */
-/*   Updated: 2026/01/23 17:49:37 by maballet         ###   ########lyon.fr   */
+/*   Updated: 2026/01/25 12:14:45 by maballet         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ ScavTrap::ScavTrap () {
 
 ScavTrap::ScavTrap(std::string name): ClapTrap(name) {
 
-	std::cout << "ScavTrap argument constructor called" << std::endl;
+	std::cout << "ScavTrap default named constructor called" << std::endl;
 	_HitPoint = 100;
 	_EnergyPoint = 50;
 	_AttackDmg = 20;
@@ -61,7 +61,7 @@ void ScavTrap::guardGate() {
 	if (_EnergyPoint <= 0)
 	{
         std::cout << GREEN << GREENBG << "⋆˙⟡" << _name << "⟡˙⋆" <<
-		STANDARD << " has no enrgy left..." << std::endl;
+		STANDARD << " has no energy left..." << std::endl;
         return;
 	}
     std::cout << GREEN << GREENBG << "⋆˙⟡" << _name << "⟡˙⋆" <<

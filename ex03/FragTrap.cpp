@@ -6,7 +6,7 @@
 /*   By: maballet <maballet@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/16 21:22:47 by maballet          #+#    #+#             */
-/*   Updated: 2026/01/25 12:14:25 by maballet         ###   ########lyon.fr   */
+/*   Updated: 2026/01/22 20:37:38 by maballet         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ FragTrap::FragTrap() {
 
 FragTrap::FragTrap (std::string name): ClapTrap(name) {
 
-	std::cout << "FragTrap default named constructor called" << std::endl;
+	std::cout << "FragTrap argument constructor called" << std::endl;
 	_HitPoint = 100;
 	_EnergyPoint = 100;
 	_AttackDmg = 30;

@@ -6,7 +6,7 @@
 /*   By: maballet <maballet@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/16 13:32:44 by maballet          #+#    #+#             */
-/*   Updated: 2026/01/23 16:55:12 by maballet         ###   ########lyon.fr   */
+/*   Updated: 2026/01/25 12:14:57 by maballet         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ ClapTrap::ClapTrap (std::string name):
 	_EnergyPoint(10),
 	_AttackDmg(0){
 
-	std::cout << "argument constructor called" << std::endl;
+	std::cout << "default named constructor called" << std::endl;
 }
 
 ClapTrap::ClapTrap (const ClapTrap& other) {

@@ -6,7 +6,7 @@
 /*   By: maballet <maballet@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/16 21:23:11 by maballet          #+#    #+#             */
-/*   Updated: 2026/01/25 13:43:02 by maballet         ###   ########lyon.fr   */
+/*   Updated: 2026/01/25 12:21:35 by maballet         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 #define ORANGE		"\033[38;5;208m"
 #define YELLOWBG	"\033[48;5;229m"
 
-class FragTrap : public ClapTrap {
+class FragTrap : virtual public ClapTrap {
 
 	public:
 	

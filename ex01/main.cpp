@@ -6,7 +6,7 @@
 /*   By: maballet <maballet@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/16 14:04:56 by maballet          #+#    #+#             */
-/*   Updated: 2026/01/22 20:58:15 by maballet         ###   ########lyon.fr   */
+/*   Updated: 2026/01/25 12:15:09 by maballet         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,5 @@ int main(void)
     ptr->attack("Darcy");
     delete ptr;
 
-    std::cout << std::endl << std::endl << GREYBG << "===== END OF MAIN =====" << STANDARD << std::endl << std::endl;
     return 0;
 }
